@@ -25,13 +25,14 @@ export default function RedirectPage() {
           setIsLoading(false);
         }
       } catch (err) {
+        console.error("🚀 ~ fetchOriginalUrl ~ err:", err);
         setError("An error occurred while fetching the original URL");
         setIsLoading(false);
       }
     };
 
     fetchOriginalUrl();
-  }, []);
+  }, [params.shortUrl, router]);
 
   if (isLoading) {
     return (

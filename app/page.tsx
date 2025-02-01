@@ -1,4 +1,3 @@
-import Image from "next/image";
 import UrlShortenerForm from "./components/UrlShortenerForm";
 
 export default function Home() {

@@ -7,7 +7,8 @@ const isValidUrl = (url: string) => {
   try {
     new URL(url);
     return true;
-  } catch (_) {
+  } catch (error) {
+    console.log("🚀 ~ isValidUrl ~ error:", error);
     return false;
   }
 };
